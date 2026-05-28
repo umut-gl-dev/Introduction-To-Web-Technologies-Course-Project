@@ -1,0 +1,834 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    text-shadow:
+        -0.5px -0.5px 0 black,
+        0.5px -0.5px 0 black,
+        -0.5px 0.5px 0 black,
+        0.5px 0.5px 0 black;
+}
+
+:root {
+    /* --clr1: #4f46e5; */
+    /* --clr2: rgb(60, 60, 140); */
+    --clr1: #ECE3B5;
+    --clr2: #D6C994;
+    /* --clr1: #AAAAAA; */
+    /* --clr2: #303040; */
+    --clr3: #fff;
+    --clr4: #c7d2fe;
+    --clr5: #1F2937;
+    --clr6: rgba(0, 0, 0, 0.8);
+    --clr7: rgba(80, 190, 255, 0.08);
+    --clr8: #6B7280;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--clr5);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--clr2);
+    border-radius: 10px;
+    border: 3px solid var(--clr5);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--clr1)
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    background-color: color-mix(in srgb, var(--clr5) 90%, #fff 10%);
+    background-image: radial-gradient(rgba(255, 255, 255, 0.03) 2px, transparent 1px);
+    background-size: 20px 20px;
+    color: color-mix(in hsl shorter hue, var(--clr8) 50%, var(--clr3) 50%);
+}
+
+nav {
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 85px;
+    z-index: 10;
+}
+
+nav div {
+    display: flex;
+    --clr: color-mix(in srgb, var(--clr2) 60%, black 40%);
+    background-image: linear-gradient(to right, var(--clr), var(--clr2), var(--clr));
+    height: 85px;
+    line-height: 85px;
+    color: var(--clr3);
+    position: relative;
+    justify-content: space-between;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3),
+        0 0 12px 0 rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+nav div .navspan {
+    width: 100%;
+}
+
+nav div .navspan a {
+    text-decoration: none;
+    color: var(--clr3);
+}
+
+nav div .navspan span a {
+    text-decoration: none;
+    color: var(--clr3);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+nav div .navspan:nth-child(1) {
+    font-size: 37px;
+    font-weight: 700;
+    text-align: center;
+    margin-left: 1%;
+    white-space: nowrap;
+    padding-left: 10px;
+}
+
+@media (max-width: 1250px) {
+    nav div .navspan:nth-child(2) {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+nav div .navspan:nth-child(2) {
+    display: flex;
+    margin-left: 10%;
+    gap: 5%;
+}
+
+nav div .navspan:nth-child(2) span {
+    overflow: hidden;
+    position: relative;
+}
+
+nav div .navspan:nth-child(2) a {
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+nav div .navspan:nth-child(2) a:hover {
+    color: var(--clr8);
+}
+
+nav div .navspan:nth-child(2) span a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: var(--clr3);
+    transform: translateX(-101%);
+    bottom: 20px;
+    transition: all 0.3s ease;
+    border: 1px solid black;
+}
+
+nav div .navspan:nth-child(2) span a:hover::before {
+    transform: translateX(0%);
+    background-color: var(--clr8);
+}
+
+.container .knowlodge {
+    height: auto;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: color-mix(in srgb, var(--clr5) 100%, #fff 0%);
+    background-image: radial-gradient(rgba(255, 255, 255, 0.03) 2px, transparent 1px);
+    background-size: 20px 20px;
+    overflow: hidden;
+}
+
+.container .knowlodge h1 {
+    font-size: 45px;
+    margin-top: 60px;
+    color: var(--clr2);
+    max-width: 600px;
+}
+
+.container .knowlodge p {
+    margin-top: 25px;
+    width: 40%;
+    font-size: 22px;
+    font-weight: 370;
+    text-align: justify;
+    max-width: 800px;
+    min-width: 550px;
+}
+
+.container .knowlodge div {
+    background-color: rgba(120, 170, 255, 0.1);
+    max-width: 40%;
+    width: auto;
+    margin: 40px 0px 50px 0px;
+    border-radius: 5px;
+    padding: 25px;
+    position: relative;
+    overflow: hidden;
+    min-width: 550px;
+}
+
+.container .knowlodge div::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    background-color: var(--clr1);
+    width: 3px;
+    top: 0;
+    left: 0;
+}
+
+.container .knowlodge div q {
+    color: var(--clr1);
+}
+
+.container #life {
+    padding-top: 70px;
+    padding-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    position: relative;
+}
+
+.container #life h1 {
+    font-size: 38px;
+    margin-top: 30px;
+    margin-bottom: 80px;
+    color: var(--clr2);
+}
+
+.container #life div {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    text-align: left;
+    gap: 45px;
+    position: relative;
+    margin-right: 16%;
+    max-width: 1300px;
+    min-width: 480px;
+}
+
+.container #life div::before {
+    content: '';
+    position: absolute;
+    height: 104%;
+    transform: translateY(-2%);
+    width: 2px;
+    border-radius: 50%;
+    background-color: var(--clr1);
+    left: -2%;
+}
+
+.container #life div span {
+    display: flex;
+    flex-direction: column;
+    margin-left: 3%;
+    gap: 20px;
+}
+
+.container #life div span p {
+    font-size: 22px;
+    font-weight: 370;
+    text-align: justify;
+}
+
+.container #life div span .bulletpoint {
+    color: var(--clr1);
+    font-size: 25px;
+    padding-left: 3.5%;
+    position: relative;
+}
+
+.container #life div span .bulletpoint::before {
+    content: '';
+    background-color: var(--clr1);
+    position: absolute;
+    left: 0px;
+    transform: translateY(65%);
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+}
+
+.container #life a #lifebtn {
+    background-color: transparent;
+    border: 1px solid var(--clr1);
+    position: relative;
+    width: 100%;
+    padding: 14px 5% 14px 5%;
+    border-radius: 10px;
+    color: var(--clr3);
+    font-size: 21px;
+    font-weight: 600;
+    cursor: pointer;
+    z-index: 5;
+    background-color: rgba(80, 190, 255, 0.08);
+}
+
+.container #life a {
+    margin-top: 50px;
+    position: relative;
+    width: 10%;
+    text-align: center;
+    margin-right: 16%;
+    max-width: 200px;
+    min-width: 150px;
+}
+
+.container #life a::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    border-radius: 10px;
+    --clr: color-mix(in srgb, var(--clr2) 60%, black 40%);
+    background-image: linear-gradient(-15deg, var(--clr), var(--clr2), var(--clr));
+    opacity: 0;
+    transition: all 0.3s ease-out;
+}
+
+.container #life a:hover::after {
+    opacity: 1;
+}
+
+.container #contributions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: color-mix(in srgb, var(--clr5) 100%, #fff 0%);
+    background-image: radial-gradient(rgba(255, 255, 255, 0.03) 2px, transparent 1px);
+    background-size: 20px 20px;
+    gap: 30px;
+    align-items: center;
+    padding: 60px;
+    padding-top: 80px;
+}
+
+.container #contributions h1 {
+    font-size: 38px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color: var(--clr2);
+}
+
+.container #contributions div {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    width: 100%;
+    justify-content: center;
+}
+
+.container #contributions div span {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    background-color: rgba(80, 190, 255, 0.08);
+    box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    gap: 20px;
+    position: relative;
+    border-radius: 10px;
+    max-height: 500px;
+    max-width: 350px;
+    min-width: 200px;
+    overflow: hidden;
+}
+
+.container #contributions div span h3 {
+    color: var(--clr1);
+    font-size: 25px;
+}
+
+.container #contributions div span p {
+    font-size: 22px;
+    font-weight: 370;
+}
+
+.container #contributions div span div {
+    display: inline;
+    width: 100%;
+    background-color: color-mix(in srgb, var(--clr5) 100%, #fff 0%);
+    background-image: radial-gradient(rgba(255, 255, 255, 0.03) 2px, transparent 1px);
+    background-size: 20px 20px;
+    padding: 20px;
+    border-radius: 5px;
+    color: var(--clr3);
+    text-shadow: none;
+    text-align: center;
+    border: 1px dotted var(--clr1);
+}
+
+.container #cat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 40px;
+    margin-bottom: 65px;
+    padding-top: 100px;
+}
+
+.container #cat h1 {
+    font-size: 38px;
+    margin-bottom: 30px;
+    color: var(--clr2);
+}
+
+.container #cat div {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.1);
+    gap: 20px;
+    padding: 30px;
+    justify-content: center;
+}
+
+.container #cat .thought {
+    background-color: rgba(80, 190, 255, 0.08);
+    max-width: 850px;
+    min-width: 600px;
+    margin: 20px;
+}
+
+.container #cat h3 {
+    font-size: 23px;
+    color: var(--clr1);
+}
+
+.container #cat p {
+    font-size: 22px;
+    font-weight: 370;
+}
+
+.container #cat #superposition {
+    position: relative;
+    border: 1px solid var(--clr1);
+    max-width: 850px;
+    min-width: 600px;
+    margin: 20px;
+    height: 240px;
+    display: flex;
+    justify-content: start;
+    overflow: hidden;
+    transition: height 0.5s ease;
+}
+
+.container #cat input {
+    background-color: transparent;
+    border: 1px solid var(--clr1);
+    position: relative;
+    width: 100%;
+    padding: 14px 5% 14px 5%;
+    border-radius: 10px;
+    color: var(--clr3);
+    font-size: 21px;
+    font-weight: 600;
+    cursor: pointer;
+    z-index: 5;
+    background-color: rgba(80, 190, 255, 0.08);
+}
+
+.container #cat span {
+    position: relative;
+    width: 30%;
+    min-width: 180px;
+}
+
+.container #cat span::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    border-radius: 10px;
+    --clr: color-mix(in srgb, var(--clr2) 60%, black 40%);
+    background-image: linear-gradient(-15deg, var(--clr), var(--clr2), var(--clr));
+    opacity: 0;
+    transition: all 0.3s ease-out;
+}
+
+.container #cat span:hover::after {
+    opacity: 1;
+}
+
+.container #cat #superposition #explanation {
+    display: block;
+    gap: 5px;
+    padding: 3%;
+    width: 100%;
+    border-radius: 5px;
+    background-color: rgba(120, 170, 255, 0.1);
+}
+
+.container #cat #explanation p:nth-child(1) {
+    margin-bottom: 20px;
+}
+
+.container #cat #explanation .bulletpoint {
+    padding-left: 4%;
+    position: relative;
+}
+
+.container #cat #explanation .bulletpoint::before {
+    content: '';
+    background-color: var(--clr1);
+    position: absolute;
+    left: 2%;
+    transform: translateY(200%);
+    border-radius: 50%;
+    width: 6px;
+    height: 6px;
+}
+
+.container #cat #explanation p:nth-child(5) {
+    margin-top: 20px;
+}
+
+.container #cat .experiment {
+    background-color: rgba(120, 170, 255, 0.1);
+    align-items: center;
+    position: relative;
+    max-width: 850px;
+    min-width: 600px;
+    margin: 20px;
+}
+
+.container #cat .experiment h3 {
+    width: 100%;
+    text-align: left;
+}
+
+.container #cat .experiment div {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--clr4);
+    align-items: center;
+    text-align: center;
+    width: 60%;
+}
+
+.container #cat .experiment div h4 {
+    color: var(--clr1);
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.container #cat .experiment div p {
+    font-size: 22px;
+    font-weight: 370;
+}
+
+.container #cat .experiment p:nth-child(3) {
+    font-size: 20px;
+}
+
+.container #cat .experiment input {
+    padding: 14px 2% 14px 2%;
+    width: 100%;
+    transition: 0.2s ease;
+    font-size: 22px;
+}
+
+.container #cat .experiment #alive {
+    border: 2px solid rgba(120, 250, 120, 0.5);
+    background-color: rgba(120, 250, 120, 0.3);
+    height: 0px;
+    padding: 0%;
+    border: none;
+    overflow: hidden;
+    transition: 0.5s ease;
+}
+
+.container #cat .experiment #alive h2 {
+    color: var(--clr3);
+    margin: 3%;
+    margin-bottom: 20px;
+}
+
+.container #cat .experiment #alive p {
+    margin: 5px 0 5px 0;
+}
+
+.container #cat .experiment #dead {
+    border: 2px solid rgba(250, 120, 120, 0.5);
+    height: 0px;
+    padding: 0%;
+    border: none;
+    background-color: rgba(250, 120, 120, 0.3);
+    transition: 0.5s ease;
+}
+
+.container #cat .experiment #dead h2 {
+    color: var(--clr3);
+    margin: 10px;
+    margin-bottom: 20px;
+}
+
+.container #cat .experiment #dead p {
+    margin: 5px;
+}
+
+.container #sources {
+    display: flex;
+    flex-direction: column;
+    background-color: color-mix(in srgb, var(--clr5) 100%, #fff 0%);
+    background-image: radial-gradient(rgba(255, 255, 255, 0.03) 2px, transparent 1px);
+    background-size: 20px 20px;
+    align-items: center;
+    gap: 30px;
+    padding-top: 100px;
+    padding-bottom: 60px;
+}
+
+.container #sources h1 {
+    font-size: 38px;
+    margin-bottom: 50px;
+    color: var(--clr2);
+}
+
+.container #sources .out {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    max-width: 800px;
+}
+
+.container #sources .out .in {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    box-shadow: none;
+    gap: 20px;
+    padding: 2.2%;
+    border-radius: 10px;
+    background-color: rgba(80, 190, 255, 0.08);
+    box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+.container #sources .out h2 {
+    color: var(--clr1);
+    margin: 10px 0px 25px 0px;
+    position: relative;
+}
+
+.container #sources .out h2::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: var(--clr1);
+    transform: translateY(45px);
+}
+
+.container #sources .out .in div {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+    padding-left: 5%;
+    transition: 0.3s ease;
+}
+
+.container #sources .out .in div h3 {
+    font-size: 20px;
+    color: var(--clr1);
+}
+
+.container #sources .out .in div .author {
+    color: var(--clr3);
+    font-size: 20px;
+}
+
+.container #sources .out .in div p {
+    font-size: 18px;
+    width: 80%;
+}
+
+.container #sources .out .in div::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    top: 0;
+    left: 0px;
+    background-color: var(--clr1);
+}
+
+.container #sources .out .in div:hover {
+    background-color: rgba(120, 170, 255, 0.1);
+    transform: translateX(10px);
+}
+
+.container #sources .web {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    gap: 0px;
+    padding-bottom: 20px;
+    overflow: hidden;
+    background-color: rgba(80, 190, 255, 0.08);
+    max-width: 800px;
+    width: max-content;
+}
+
+.container #sources .web .in {
+    display: flex;
+    flex-direction: row;
+    box-shadow: none;
+    padding: 20px 2.2% 0px 2.2%;
+    width: 100%;
+    background-color: transparent;
+}
+
+.container #sources .web h2 {
+    margin: 10px 2% 20px 2%;
+}
+
+footer {
+    --clr: color-mix(in srgb, var(--clr2) 60%, black 40%);
+    background-image: linear-gradient(to right, var(--clr), var(--clr2), var(--clr));
+    height: 145px;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+    position: relative;
+}
+
+footer div {
+    text-align: left;
+}
+
+footer div h3 {
+    font-size: 27px;
+    color: var(--clr3);
+}
+
+footer div p {
+    color: var(--clr3);
+    font-size: 21px;
+}
+
+footer p {
+    color: var(--clr3);
+    font-size: 19px;
+}
+
+#scrollTopBtn {
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    z-index: 99;
+    font-size: 22px;
+    background-color: rgba(80, 190, 255, 0.08);
+    color: white;
+    border: 2px solid var(--clr1);
+    outline: none;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s, transform 0.3s;
+    width: 65px;
+    height: 65px;
+}
+#scrollTopBtn:hover {
+    transform: scale(1.1);
+}
+#scrollTopBtn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+    --clr: color-mix(in srgb, var(--clr2) 60%, black 40%);
+    background-image: linear-gradient(-15deg, var(--clr), var(--clr1), var(--clr));
+}
+#scrollTopBtn:hover::before{
+    opacity: 1;   
+}
+#expBtn{
+    font-size: 21px;
+    font-weight: 600;
+    border-radius: 10px;
+    border: 1px solid var(--clr1);
+    background-color: rgba(80, 190, 255, 0.08);
+    cursor: pointer;
+    position: relative;
+    padding: 20px 0px;
+    z-index: 20;
+}
+#expBtn a{
+    text-decoration: none;
+    color: var(--clr3);
+    padding: 20px 60px;
+    border-radius: 10px;
+}
+#expBtn::before{
+    opacity: 0;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    z-index: -10;
+    transition: all 0.3s ease;
+    --clr: color-mix(in srgb, var(--clr2) 60%, black 40%);
+    background-image: linear-gradient(-15deg, var(--clr), var(--clr2), var(--clr));
+}
+#expBtn:hover::before{
+    opacity: 1;
+}

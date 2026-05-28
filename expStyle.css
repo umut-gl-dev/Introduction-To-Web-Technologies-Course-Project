@@ -1,0 +1,238 @@
+:root {
+    /* --clr1: #4f46e5; */
+    /* --clr2: rgb(60, 60, 140); */
+    --clr1: #ECE3B5;
+    --clr2: #D6C994;
+    /* --clr1: #AAAAAA; */
+    /* --clr2: #303040; */
+    --clr3: #fff;
+    --clr4: #c7d2fe;
+    --clr5: #1F2937;
+    --clr6: rgba(0, 0, 0, 0.8);
+    --clr7: rgba(80, 190, 255, 0.08);
+    --clr8: #6B7280;
+}
+
+#content {
+    background-color: color-mix(in srgb, var(--clr5) 80%, #000 20%);
+    background-image: radial-gradient(rgba(255, 255, 255, 0.03) 2px, transparent 1px);
+    background-size: 20px 20px;
+    color: color-mix(in hsl shorter hue, var(--clr8) 50%, var(--clr3) 50%);
+}
+
+/* Superposition Section */
+section {
+    background-color: rgba(80, 190, 255, 0.08);
+    color: var(--clr3);
+    padding: 80px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    text-align: justify;
+    font-size: 21px;
+    line-height: 1.6;
+}
+
+section h1 {
+    font-size: 42px;
+    color: var(--clr2);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 30px;
+    color: var(--clr1);
+    margin-top: 40px;
+    margin-left: 5%;
+    margin-bottom: 15px;
+    align-self: flex-start;
+}
+
+section h3 {
+    font-size: 25px;
+    color: var(--clr1);
+    margin-bottom: 10px;
+}
+
+section p,
+section li {
+    font-weight: 370;
+    color: var(--clr3);
+    max-width: 1200px;
+}
+
+section p{
+    text-align: left;
+    align-self: flex-start;
+    text-align: justify;
+    margin-left: 10%;
+}
+
+section ul {
+    margin-left: 30px;
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+section ul li {
+    margin-bottom: 10px;
+}
+
+section pre {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 10px 15px;
+    border-radius: 5px;
+    border-left: 4px solid var(--clr1);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    overflow-x: auto;
+    max-width: 100%;
+    width: fit-content;
+    text-align: left;
+}
+
+
+section em {
+    color: var(--clr4);
+    font-style: italic;
+}
+
+@media screen and (max-width: 768px) {
+    section {
+        padding: 60px 30px;
+        font-size: 19px;
+    }
+
+    section h1 {
+        font-size: 32px;
+    }
+
+    section h2 {
+        font-size: 24px;
+    }
+
+    section ul {
+        margin-left: 20px;
+    }
+
+    section pre {
+        font-size: 16px;
+    }
+}
+
+#quizSection {
+    position: relative;
+    text-align: center;
+    margin: 60px auto;
+    max-width: 800px;
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid var(--clr1);
+    background-color: rgba(80, 190, 255, 0.08);
+}
+
+#quizSection h1 {
+    color: var(--clr1);
+    margin-bottom: 30px;
+}
+
+#startScreen p,
+#quizResult {
+    font-size: 22px;
+    color: var(--clr3);
+    margin-bottom: 20px;
+}
+
+#startScreen button,
+#nextBtn,
+#resultScreen button {
+    padding: 12px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 1px solid var(--clr1);
+    background-color: rgba(80, 190, 255, 0.1);
+    color: var(--clr3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#startScreen button:hover,
+#nextBtn:hover,
+#resultScreen button:hover {
+    background-color: rgba(80, 190, 255, 0.2);
+}
+
+.question-block {
+    text-align: left;
+    width: 100%;
+}
+
+.question-block p {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--clr3);
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.question-block label.option {
+    font-size: 18px;
+    color: var(--clr3);
+    display: block;
+    margin: 10px 0;
+    padding: 5px 2%;
+    border-radius: 5px;
+    border: 1px solid var(--clr1);
+    width: 60%;
+    position: relative;
+    z-index: 20;
+    transition: 0.3s ease;
+}
+
+.question-block label.option:hover{
+    background-color: rgba(80, 190, 255, 0.2);
+}
+
+.question-block label.option::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+    z-index: -10;
+    opacity: 0;
+    --clr: color-mix(in srgb, var(--clr2) 60%, black 40%);
+    background-image: linear-gradient(-15deg, var(--clr), var(--clr2), var(--clr));
+    transition: 0.3s ease;
+}
+
+.question-block label.option:has(input[type="radio"]:checked)::before{
+    opacity: 1;
+}
+
+button{
+    position: relative;
+    z-index: 10;
+}
+button::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    z-index: -10;
+    opacity: 0;
+    transition: all 0.3s ease;
+    --clr: color-mix(in srgb, var(--clr2) 60%, black 40%);
+    background-image: linear-gradient(-15deg, var(--clr), var(--clr2), var(--clr));
+}
+button:hover::before{
+    opacity: 1;
+}

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="expStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        #content {
+            flex: 1;
+        }
+
+        nav {
+            position: sticky;
+            bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div>
+            <span class="navspan"><a href="index.html">Erwin Schrödinger</a></span>
+            <span class="navspan">
+                <span><a href="#"></a></span>
+                <span><a href="#"></a></span>
+                <span><a href="#"></a></span>
+                <span><a href="#"></a></span>
+            </span>
+        </div>
+    </nav>
+    <div id="content">
+        <section>
+            <h1>Süperpozisyon İlkesi</h1>
+
+            <h2>1. Giriş ve Tarihsel Arka Plan</h2>
+            <p>
+                Süperpozisyon ilkesi, kuantum mekaniğinin temel taşlarından biridir. Bu ilke, bir parçacığın (örneğin
+                elektron, foton veya atom) aynı anda birden fazla kuantum durumunda bulunabileceğini ifade eder.
+            </p>
+            <p>
+                20. yüzyılın başlarında Max Planck'ın kara cisim ışımasını kuantumlanmış enerji düzeyleriyle açıklaması
+                ve ardından Einstein’ın fotoelektrik etkiyi foton kavramıyla çözmesi, fiziğin temelinde devrim yarattı.
+                Schrödinger, Heisenberg ve Dirac gibi bilim insanlarının katkılarıyla kuantum teorisi doğdu ve
+                süperpozisyon ilkesi bu teorinin merkezine oturdu.
+            </p>
+
+            <h2>2. Kavramsal Tanım</h2>
+            <p>
+                Süperpozisyon, klasik fiziğin sezgisel olmayan bir yönünü ortaya koyar: Bir kuantum sistemi, farklı
+                olasılık durumlarının bir kombinasyonunda bulunabilir. Ancak sistem gözlemlenene kadar hangi durumda
+                olduğunu bilemeyiz.
+            </p>
+            <p>
+                Örneğin bir elektron, çift yarık deneyinde aynı anda her iki yarıktan da geçmiş gibi davranır. Bu
+                davranış, parçacığın konumunun belirli bir değeri olmadığını; ancak olasılıklar halinde “dağıldığını”
+                gösterir.
+            </p>
+
+            <h2>3. Matematiksel Temel</h2>
+            <p>
+                Kuantum sistemleri, <strong>Hilbert uzayı</strong> adı verilen soyut bir matematiksel yapıda temsil
+                edilir. Her kuantum durumu, bu uzaydaki bir vektördür. Eğer bir sistem iki farklı durumda
+                bulunabiliyorsa, bu durumların doğrusal kombinasyonu da geçerli bir kuantum durumu oluşturur.
+            </p>
+            <pre>|ψ⟩ = c₁|ψ₁⟩ + c₂|ψ₂⟩</pre>
+            <p>
+                Burada:
+            <ul>
+                <li><code>|ψ⟩</code>: sistemin toplam durumu (süperpozisyon)</li>
+                <li><code>|ψ₁⟩, |ψ₂⟩</code>: olası durumlar (örneğin "parçacık sağda" ve "parçacık solda")</li>
+                <li><code>c₁, c₂</code>: karmaşık katsayılar (olasılık genlikleri)</li>
+            </ul>
+            Olasılıkların korunması için şu kural geçerlidir:
+            <code>|c₁|² + |c₂|² = 1</code>
+            </p>
+
+            <h2>4. Fiziksel Anlam</h2>
+            <p>
+                Süperpozisyon, doğrudan gözlenebilen bir şey değildir; ancak onun etkileri deneysel olarak ortaya çıkar.
+                Bir elektronun hem yukarı hem aşağı spin durumunda olması, bir fotonun iki yoldan aynı anda gitmesi ya
+                da bir atomun uyarılmış ve temel enerji düzeylerinde aynı anda bulunması, süperpozisyonun fiziksel
+                yansımalarıdır.
+            </p>
+
+            <h2>5. Schrödinger'in Kedisi Düşünce Deneyi</h2>
+            <p>
+                Erwin Schrödinger, kuantum fiziğinin günlük hayatla uyuşmazlığını göstermek için bir düşünce deneyi
+                önerdi. Kapalı bir kutuya konan bir kedi, radyoaktif bir atomun bozunup bozunmamasına bağlı olarak
+                zehirlenebilir. Atomun kuantum doğası gereği süperpozisyon halinde olması, kedinin de aynı anda hem
+                <strong>canlı</strong> hem <strong>ölü</strong> olduğu anlamına gelir — tabii kutu açılıp gözlem
+                yapılana kadar.
+            </p>
+            <p><em>Bu deney, kuantum süperpozisyonunun makroskobik nesnelere nasıl uygulanabileceğini sorgular.</em></p>
+
+            <h2>6. Ölçüm Problemi ve Durum Çökmesi</h2>
+            <p>
+                Süperpozisyon, sistem ölçülene kadar devam eder. Ancak bir ölçüm yapıldığında sistem, belirli bir duruma
+                “çöker”. Bu olgu, "kuantum ölçüm problemi" olarak bilinir ve hâlâ tartışmalı bir konudur. Çeşitli
+                yorumlar mevcuttur:
+            </p>
+            <ul>
+                <li><strong>Kopenhag Yorumu:</strong> Ölçüm yapıldığında sistem çökerek tek bir duruma geçer.</li>
+                <li><strong>Çok Dünyalı Yorum:</strong> Her olasılık ayrı bir evrende gerçekleşir.</li>
+                <li><strong>De Broglie-Bohm Yorumu:</strong> Tüm durumlar vardır, ancak ölçüm gerçeği netleştirir.</li>
+            </ul>
+
+            <h2>7. Deneysel Kanıtlar</h2>
+            <ul>
+                <li><strong>Çift Yarık Deneyi:</strong> Elektronlar tek tek gönderildiğinde bile girişim deseni oluşur —
+                    süperpozisyonun kanıtı.</li>
+                <li><strong>Bell Eşitsizlikleri:</strong> Ölçümler, yerel gerçekçiliğin ihlal edildiğini ve
+                    süperpozisyonun temel olduğunu gösterir.</li>
+                <li><strong>Kuantal Dolanıklık Deneyleri:</strong> Bir parçacığın ölçümü, diğerinin durumunu anında
+                    belirler — süperpozisyonu ve dolanıklığı gösterir.</li>
+            </ul>
+
+            <h2>8. Modern Uygulamalar</h2>
+            <p>
+                Süperpozisyon ilkesi, çağdaş teknolojilerde devrim yaratmaktadır:
+            </p>
+            <ul>
+                <li><strong>Kuantum Bilgisayarlar:</strong> Qubit’ler, 0 ve 1 durumlarının süperpozisyonunda olabilir;
+                    bu sayede çok büyük işlem kapasitesine ulaşırlar.</li>
+                <li><strong>Kuantum Kriptografi:</strong> Süperpozisyon kullanılarak iletişim, dış müdahaleye karşı
+                    tamamen güvenli hâle getirilebilir.</li>
+                <li><strong>Manyetik Rezonans Görüntüleme (MRI):</strong> Atom çekirdeklerinin spin süperpozisyonları
+                    tıbbi görüntülemede kullanılır.</li>
+            </ul>
+
+            <h2>9. Sonuç</h2>
+            <p>
+                Süperpozisyon ilkesi, yalnızca kuantum mekaniğinin merkezinde yer almakla kalmaz, aynı zamanda
+                gerçekliğe dair algımızı da kökten değiştirir. Klasik fizik ile bağdaşmayan bu olgu, mikroskobik dünyada
+                doğanın nasıl işlediğini anlamamızı sağlar ve teknolojide yeni çığırlar açar.
+            </p>
+            <section id="quizSection">
+                <h1>Schrödinger ve Kuantum Quiz</h1>
+
+                <!-- Başlangıç ekranı -->
+                <div id="startScreen">
+                    <p>Kuantum dünyasına ne kadar hakimsin? Haydi test edelim!</p>
+                    <button onclick="startQuiz()">Testi Başlat</button>
+                </div>
+
+                <!-- Soru ekranı -->
+                <div id="questionContainer" style="display:none;"></div>
+                <button id="nextBtn" onclick="nextQuestion()" style="display:none;">Sonraki</button>
+
+                <!-- Sonuç ekranı -->
+                <div id="resultScreen" style="display:none;">
+                    <p id="quizResult"></p>
+                    <button onclick="restartQuiz()">Tekrar Çöz</button>
+                </div>
+            </section>
+
+        </section>
+    </div>
+    <button onclick="scrollToTop()" id="scrollTopBtn" title="Yukarı Çık">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <footer>
+        <div>
+            <h3>Erwin Schrödinger</h3>
+            <p>Kuantum Fiziğinin Dehası(1887-1961)</p>
+        </div>
+        <p>&copy;2025-Biyografi Projesi</p>
+    </footer>
+    <script src="expScript.js"></script>
+    <script src="scrollBtn.js"></script>
+</body>
+
+</html>
